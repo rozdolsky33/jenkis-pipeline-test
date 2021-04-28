@@ -19,31 +19,31 @@ pipeline{
         }
         stage('Tag release'){
             steps {
-               sh echo 'Tagging....'
+               sh 'echo Tagging....'
             }
 
         }
         stage('Publish Artifact'){
             steps {
-               sh echo 'Publishing....'
+               sh 'echo Publishing....'
             }
 
         }
         stage('Image Build'){
             steps {
-               sh echo 'Building....'
+               sh 'echo Building....'
             }
 
         } 
         stage('Image Push'){
             steps {
-               sh echo 'Pushing Image....'
+               sh 'echo Pushing Image....'
             }
 
         }
         stage('Deploy to DEV'){
             steps {
-               sh echo 'Deploying....'
+               sh 'echo Deploying....'
             }
         }
 
