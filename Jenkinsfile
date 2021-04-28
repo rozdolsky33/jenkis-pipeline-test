@@ -1,12 +1,12 @@
 pipeline{
     agent any
     stages {
-        stage('Cloning'){
+        stage('Clean'){
             steps {
                sh 'echo Clonning....'
             }
         }
-         stage('Build'){
+         stage('Check'){
             steps {
                sh 'echo Building....'
             }
@@ -17,25 +17,29 @@ pipeline{
             }
 
         }
-        stage('Tag release'){
+        stage('Build'){
+            steps {
+                sh 'echo Building'
+            }
+        }
+        stage('Tag Release'){
             steps {
                sh 'echo Tagging....'
             }
-
         }
-        stage('Publish Artifact'){
+        stage('Publish Artifact to Nexus'){
             steps {
                sh 'echo Publishing....'
             }
 
         }
-        stage('Image Build'){
+        stage('Docker Image'){
             steps {
                sh 'echo Building....'
             }
 
         } 
-        stage('Image Push'){
+        stage('Push Docker Image to Nexus'){
             steps {
                sh 'echo Pushing Image....'
             }
@@ -44,6 +48,21 @@ pipeline{
         stage('Deploy to DEV'){
             steps {
                sh 'echo Deploying....'
+            }
+        }
+        stage('Deploy to TRIAL'){
+            steps {
+               sh 'echo TRIAL....'
+            }
+        }
+        stage('Deploy to STAGE'){
+            steps {
+               sh 'echo STAGE....'
+            }
+        }
+        stage('Deploy to PROD'){
+            steps {
+               sh 'echo PROD....'
             }
         }
 
