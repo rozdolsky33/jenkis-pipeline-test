@@ -71,9 +71,9 @@ pipeline{
                sh 'echo PROD....'
             }
         }
-        stage('UAT Testing'){
+        stage('User Acceptance Test'){
             steps {
-               sh 'UAT Testing....'
+               sh 'Testing....'
             }
         }
 
