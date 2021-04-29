@@ -60,9 +60,20 @@ pipeline{
                sh 'echo STAGE....'
             }
         }
+        stage('UAT Testing'){
+            steps {
+               sh 'echo UAT Testing....'
+            }
+        }
+
         stage('Deploy to PROD'){
             steps {
                sh 'echo PROD....'
+            }
+        }
+        stage('UAT Testing'){
+            steps {
+               sh 'UAT Testing....'
             }
         }
 
