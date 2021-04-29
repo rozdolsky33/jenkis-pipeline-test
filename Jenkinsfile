@@ -73,7 +73,7 @@ pipeline{
         }
         stage('User Acceptance Test'){
             steps {
-               sh 'Testing....'
+               sh 'echo Testing....'
             }
         }
 
